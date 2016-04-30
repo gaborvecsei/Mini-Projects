@@ -31,5 +31,5 @@ def UpdateSpreadsheet():
 	print 'Result of the POST:' + str(result)
 
 while True:
-	input("Press ENTER to send data\n")
+	raw_input("Press ENTER to send data\n")
 	UpdateSpreadsheet()
