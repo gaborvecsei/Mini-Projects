@@ -13,7 +13,7 @@ You'll need a client_secrets.json file from Google Drive API
 Get it from here: https://console.developers.google.com
 Create a project -> Enable it -> Download json -> Rename it to: client_secrets.json
 
-To run this: python Capture_Img_To_Drive.python
+To run this: python Capture_Img_To_Drive.py
 *************************************"""
 
 import requests as req
