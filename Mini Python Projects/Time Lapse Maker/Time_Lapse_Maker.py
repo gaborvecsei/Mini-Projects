@@ -108,12 +108,10 @@ def Countdown(t):
 def main():
 	print 'Welcome Adventurer!'
 	gDriveAuth = DriveAuth()
-	minutes = input('Time between capturing (in minutes): ')
+	seconds = input('Time between capturing (in seconds): ')
 	cap = cv2.VideoCapture(0)
-	#minutes = 1
-	cntTime = minutes * 60 
 	while(True):
-		Countdown(cntTime)
+		Countdown(seconds)
         #Capture the image
 		capturedImageName = CaptureImage(cap)
 		print 'The captured image name is: ' + capturedImageName
