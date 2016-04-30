@@ -28,8 +28,8 @@ def UpdateSpreadsheet():
 	print 'Update Google spreadsheet with\n' + (str(data['Time']) + " " + str(data['Action']))
 	#Send the data
 	result = requests.post(MAGIC_FORM_URL, data)
-	print 'Result of the POST:' + result
+	print 'Result of the POST:' + str(result)
 
 while True:
-	button = input("Press ENTER to send data\n")
+	input("Press ENTER to send data\n")
 	UpdateSpreadsheet()
