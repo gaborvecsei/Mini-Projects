@@ -58,11 +58,11 @@ def DriveAuth():
 """
 Uploads an image to Google Drive
 """
-def UploadToDrive(gauth,imageName):
+def UploadToDrive(gauth,folderName,imageName):
     drive = GoogleDrive(gauth)
 
     #Name of the folder where I'd like to upload images
-    upload_folder = 'TimeLapse_TEST'
+    upload_folder = folderName
     #Id of the folder where I'd like to upload images
     upload_folder_id = None
 
@@ -109,6 +109,8 @@ def main():
 	print 'Welcome Adventurer!'
 	gDriveAuth = DriveAuth()
 	seconds = input('Time between capturing (in seconds): ')
+	folderName = raw_input('Upload folder name (on Google Drive): ')
+    saveImages = raw_input('Save the images on the computer? (y/n)')
 	cap = cv2.VideoCapture(0)
 	while(True):
 		Countdown(seconds)
@@ -116,9 +118,10 @@ def main():
 		capturedImageName = CaptureImage(cap)
 		print 'The captured image name is: ' + capturedImageName
         #Uploads to Google Drive
-		UploadToDrive(gDriveAuth,capturedImageName)
-        #Delete the captured image after it was uploaded
-		os.remove(capturedImageName)
+		UploadToDrive(gDriveAuth,folderName,capturedImageName)
+        if saveImages == 'n' or saveImages == 'N':
+			#Delete the captured image after it was uploaded
+			os.remove(capturedImageName)
 
 	# When everything done, release the capture
 	cap.release()
