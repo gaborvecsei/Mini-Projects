@@ -10,6 +10,7 @@ You can learn more about my computer science "philosophy" [on my blog](https://g
 So in this repository you can find projects from Matlab image segmentation to simple word counting, face detection and much more. 
 
 ## Project Descriptions ##
+----------------------------------
 
 TODO
 
