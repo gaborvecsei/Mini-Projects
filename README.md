@@ -1,4 +1,5 @@
 # README #
+----------
 
 MiniProjects is a collection of my scripts, little applications. I wrote these to learn languages and to create awesome projects.
 
