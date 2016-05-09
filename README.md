@@ -19,4 +19,4 @@ TODO
 * Vecsei Gábor - university student
 * Budapest University of Technology and Economics
 * [My personal blog](https://gaborvecsei.wordpress.com/)
-* <vecseigabor.x@gmail.com>
+* vecseigabor.x@gmail.com
